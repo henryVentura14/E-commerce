@@ -10,6 +10,7 @@ const Budget = () => {
     const product = useSelector((state) => state.modules.products);
     useEffect(() => {
         dispatch(fetch_get_products())
+        // eslint-disable-next-line
     }, [])
 
     const optionCurrency = { style: 'currency', currency: 'USD' };

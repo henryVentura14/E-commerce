@@ -8,7 +8,7 @@ import {
 } from '../config/types'
 const initialState = {
   zipdata: [],
-  products:[],
+  products: [],
   error: '',
   success: ''
 }
@@ -18,21 +18,21 @@ const modulesReducer = (state = initialState, action) => {
     case GET_PRODUCTS: {
       return {
         ...state,
-        products:action.payload,
+        products: action.payload,
         success: 'Consulta exitosa'
       }
     }
     case GET_ZIP: {
       return {
         ...state,
-        zipdata:action.payload,
+        zipdata: action.payload,
         success: 'Consulta exitosa'
       }
     }
     case POST_CONTACT: {
       return {
         ...state,
-        success:'Enviado con exito',
+        success: 'Enviado con exito'
       }
     }
     case SUCCESS: {
