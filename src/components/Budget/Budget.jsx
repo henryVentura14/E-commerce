@@ -2,7 +2,11 @@ import React from 'react';
 import '../../styles/Budget.css';
 const Budget = () => {
     return (
-        <div className="budget"><h1 className="title">Hello Budget</h1></div>
+        <section className="content-budget">
+            <div className="title-budget">
+                <h1>RESUMEN DE LA ORDEN</h1>
+            </div>
+        </section>
     );
 }
 

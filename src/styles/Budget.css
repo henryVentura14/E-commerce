@@ -1,3 +1,36 @@
-.budget .title{
-    color: blueviolet;
+:root {
+    --black   : #000000;
+    --grey    : #ede9ea;
+    --red     : #d90a42;
+    --darkGrey: #b8b8b8;
 }
+
+.content-budget {
+    width : 24%;
+    height: 600px;
+    border: solid 1px var(--darkGrey);
+}
+
+.title-budget {
+    color           : var(--black);
+    background-color: var(--grey);
+    padding         : 12px 12px;
+    font-size       : 12px;
+    text-align      : center;
+}
+
+/*MEDIA QUERY*/
+@media screen and (max-width:1024px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:600px) {
+    .content-budget{
+        margin-top: 16px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:480px) {}
+
+@media screen and (max-width:320px) {}

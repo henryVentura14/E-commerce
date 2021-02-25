@@ -5,11 +5,10 @@ import Budget from './components/Budget/Budget'
 
 const App = () => {
 	return (
-		<div>
+		<main className="app">
 			<Form />
 			<Budget />
-			<h1>Hello App</h1>
-		</div>
+		</main>
 	);
 };
 
