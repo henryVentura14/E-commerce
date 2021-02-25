@@ -8,13 +8,14 @@ const Form = () => {
     }
     const [data, setData] = useState(initialState)
 
-    const { name, lastName, email, phone, zipCode, colony, region, city, delegation, street, active } = data
+    const { name, lastName, email, phone, zipCode, colonies, region, city, delegation, street, active } = data
     const onChange = value => {
         setData({
             ...data,
             [value.name]: value.value
         })
     }
+
     return (
         <section className="content-form">
             <div className="title-form">
@@ -82,9 +83,9 @@ const Form = () => {
                         <input
                             className="input-form"
                             type="text"
-                            name="colony"
-                            id="colony"
-                            value={colony}
+                            name="colonies"
+                            id="colonies"
+                            value={colonies}
                             onChange={onChange}
                             placeholder="Colonia" />
                     </div>
@@ -134,7 +135,7 @@ const Form = () => {
                     </div>
                
                 <div className="button-group">
-                    <button type="button" className="directions">Libre de direcciones</button>
+                    <button type="button" className="directions">Libreta de direcciones</button>
                     <input  className="save" type="submit" value="Guardar" />
                 </div>
                 <div className="checkbox">

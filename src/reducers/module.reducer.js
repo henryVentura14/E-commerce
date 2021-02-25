@@ -1,33 +1,51 @@
 // Reducers config
-import { FETCH, SUCCESS, ERROR } from '../config/types'
-
+import {
+  ERROR,
+  GET_PRODUCTS,
+  GET_ZIP,
+  SUCCESS,
+  POST_CONTACT
+} from '../config/types'
 const initialState = {
-  data: [],
-  loading: false,
-  error: ''
+  zipdata: [],
+  products:[],
+  error: '',
+  success: ''
 }
 
 const modulesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH: {
+    case GET_PRODUCTS: {
       return {
         ...state,
-        loading: true
+        products:action.payload,
+        success: 'Consulta exitosa'
+      }
+    }
+    case GET_ZIP: {
+      return {
+        ...state,
+        zipdata:action.payload,
+        success: 'Consulta exitosa'
+      }
+    }
+    case POST_CONTACT: {
+      return {
+        ...state,
+        success:'Enviado con exito',
       }
     }
     case SUCCESS: {
       return {
         ...state,
-        data: action.payload,
-        loading: false
+        success: action.payload
       }
     }
     case ERROR: {
       return {
         ...state,
-        loading: false,
-        data: [],
-        error: action.payload      }
+        error: action.payload
+      }
     }
     default:
       return state

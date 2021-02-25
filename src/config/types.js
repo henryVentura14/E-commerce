@@ -1,3 +1,5 @@
-export const FETCH = 'FETCH'
-export const SUCCESS = 'SUCCESS'
-export const ERROR = 'ERROR'
+export const ERROR        = 'ERROR'
+export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const GET_ZIP      = 'GET_ZIP'
+export const SUCCESS      = 'SUCCESS'
+export const POST_CONTACT = 'POST_CONTACT'
