@@ -3,6 +3,7 @@
     --grey    : #ede9ea;
     --red     : #d90a42;
     --darkGrey: #b8b8b8;
+    --dark    : #322f3d;
 }
 
 .title-form {
@@ -30,19 +31,19 @@
 }
 
 .content-inputs {
-    width          : 100%;
-    height         : 400px;
+    width          : 60%;
+    height         : 500px;
     display        : flex;
     justify-content: flex-start;
     justify-items  : flex-start;
     align-items    : center;
     align-content  : center;
-    flex-direction : column;
+    flex-direction : row;
     flex-wrap      : wrap;
 }
 
 .input-group {
-    max-width      : 30%;
+    width          : 40%;
     height         : 44px;
     display        : flex;
     justify-content: flex-start;
@@ -54,7 +55,7 @@
 }
 
 .input-group i {
-    background-color: black;
+    background-color: var(--black);
     color           : white;
     font-size       : 24px;
     padding         : 10px 20px;
@@ -75,16 +76,17 @@
 }
 
 .button-group {
-    width          : 50%;
+    width          : 100%;
     display        : flex;
     justify-items  : flex-start;
     justify-content: flex-start;
     align-content  : center;
     align-items    : center;
+    padding        : 16px 0;
+    margin-left    : 16px;
 }
 
 .save {
-    min-width       : 20%;
     padding         : 8px 16px;
     font-size       : 1em;
     background-color: var(--black);
@@ -94,7 +96,6 @@
 }
 
 .directions {
-    width           : 40%;
     padding         : 8px 16px;
     font-size       : 1em;
     background-color: var(--black);
@@ -103,30 +104,132 @@
 }
 
 .checkbox {
-    width          : 50%;
+    width          : 100%;
     display        : flex;
     justify-items  : flex-start;
     justify-content: flex-start;
     align-content  : center;
     align-items    : center;
     padding        : 16px 0;
+    margin-left    : 16px;
+    color          : var(--dark);
+
+}
+
+.checkbox label {
+    margin-left: 16px;
 }
 
 
 /*MEDIA QUERY*/
-@media screen and (max-width:1024px) {}
-
-@media screen and (max-width:768px) {}
-
-@media screen and (max-width:600px) {
-    .content-inputs {
-        display: block;
-        height : auto;
+@media screen and (max-width:1366px) {
+    .content-inputs .checkbox .button-group {
+        width          : 100%;
+        justify-content: center;
+        justify-items  : center;
     }
 
     .input-group {
-        max-width: 100%;
-        height   : 24px;
+        width : 40%;
+        margin: 12px;
+    }
+
+    .input-form {
+        font-size: .8em;
+    }
+
+    .checkbox {
+        font-size: .8em;
+    }
+
+    .input-group {
+        height: 35px;
+
+    }
+
+    .input-group i {
+        height   : 35px;
+        font-size: .5em;
+        padding  : 11px 10px;
+    }
+
+    .input-form {
+        font-size: .8em;
+        height   : 35px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .content-inputs {
+        width: 90%;
+
+    }
+
+    .input-group {
+        width : 40%;
+        margin: 8px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .content-inputs {
+        width : 90%;
+        height: auto;
+        justify-content: center;
+        justify-items  : center;
+    }
+
+    .input-group {
+        width : 40%;
+        height: 30px;
+        margin: 4px;
+    }
+
+    .input-group i {
+        height   : 30px;
+        font-size: .5em;
+        padding  : 10px 10px;
+    }
+
+    .input-form {
+        font-size: .8em;
+        height   : 30px;
+    }
+    .button-group{
+        width: 90%;
+        padding: 10px;
+    }
+    .directions {
+        width    : 50%;
+        font-size: .8em;
+    }
+
+    .save {
+        font-size: .8em;
+        width    : auto;
+    }
+    .checkbox{
+        width: 90%;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .content-inputs {
+        display        : flex;
+        height         : auto;
+        width          : 100%;
+        justify-content: center;
+        justify-items  : center;
+        align-items    : center;
+        align-items    : center;
+    }
+
+    .input-group {
+        width : 90%;
+        height: 24px;
     }
 
     .input-group i {
@@ -150,10 +253,9 @@
         padding-bottom: 16px;
     }
 
-    .button-group {
-        width: 90%;
+    .button-group{
+        width: 100%;
     }
-
     .directions {
         width    : 70%;
         font-size: .8em;
@@ -163,11 +265,9 @@
         font-size: .8em;
         width    : auto;
     }
-
-    .checkbox {
-        width: 90%;
+    .checkbox{
+        width: 100%;
     }
-
     .checkbox label {
         font-size: .8em;
     }

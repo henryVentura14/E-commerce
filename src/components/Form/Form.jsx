@@ -132,7 +132,7 @@ const Form = () => {
                             onChange={onChange}
                             placeholder="Calle" />
                     </div>
-                </div>
+               
                 <div className="button-group">
                     <button type="button" className="directions">Libre de direcciones</button>
                     <input  className="save" type="submit" value="Guardar" />
@@ -146,6 +146,7 @@ const Form = () => {
                         onChange={onChange}
                     />
                     <label htmlFor="check">utilizar dirección de la facturacion</label>
+                </div>
                 </div>
             </form>
         </section>

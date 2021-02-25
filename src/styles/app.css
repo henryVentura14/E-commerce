@@ -33,9 +33,22 @@ html {
 
 
 /*MEDIA QUERY*/
-@media screen and (max-width:1024px) {}
+@media screen and (max-width:1366px) {
+  .app {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width:1024px) {
+  .app {
+    margin-top: 16px
+  }
+}
 
-@media screen and (max-width:768px) {}
+@media screen and (max-width:768px) {
+  .app {
+    margin-top: 10px;
+  }
+}
 
 
 @media screen and (max-width:600px) {
@@ -46,8 +59,8 @@ html {
     justify-items  : center;
     align-items    : center;
     align-content  : center;
-    overflow     : visible;
-    padding-bottom: 16px;
+    overflow       : visible;
+    padding-bottom : 16px;
   }
 }
 
